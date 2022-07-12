@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block titulo %}Bookflix-Dónde Estamos{% endblock titulo %}
     
 {% block contenido %}
+<div class="portada d-flex justify-content-center align-items-center flex-column" id="portada-sm">
+    <div class="portada-interno-sm">
+    <h1 id="portada-h1" class="animate__animated animate__fadeInRight">Bookflix - Librería</h1>
+    <p id="portada-p" class="animate__animated animate__fadeInRight">Dónde Estamos:</p>
+    </div>
+</div>
 <section>
     <div class="container mt-5 mb-5">
         <h3>Vení a conocer tu nuevo lugar preferido:</h3>
@@ -17,7 +24,7 @@
         <h3>Quiénes Somos:</h3>
         <div class="row align-items-center mt-5 mb-5">
             <div class="col-lg-6 col-sm-12 text-center">
-                <img src="./img/quienes_somos.jpg" alt="mujer buscando libro" width="60%">
+                <img src="{% static './books/img/quienes_somos.jpg' %}" alt="mujer buscando libro" width="60%">
             </div>
             <div class="col-lg-6 col-sm-12 mt-5 mb-5">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi aspernatur quae harum voluptas voluptatem, eaque facilis, quidem, iure nulla distinctio consectetur exercitationem</p>
