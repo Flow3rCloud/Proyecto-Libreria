@@ -3,10 +3,46 @@
 {% block titulo %}{{titulo}}{% endblock titulo %}
 
 {% block contenido %}
-<div class="portada d-flex justify-content-center align-items-center flex-column" id="portada-sm">
-    <div class="portada-interno-sm">
-    <h1 id="portada-h1" class="animate__animated animate__fadeInRight">Bookflix - Librería</h1>
-    <p id="portada-p" class="animate__animated animate__fadeInRight">Nuestro Catálogo:</p>
+<section>
+    <div class="portada d-flex justify-content-center align-items-center flex-column" id="portada-sm">
+        <div class="portada-interno-sm">
+            <h1 id="portada-h1" class="animate__animated animate__fadeInRight">Bookflix - Librería</h1>
+            <p id="portada-p" class="animate__animated animate__fadeInRight">Nuestro Catálogo</p>
+        </div>
     </div>
-</div>
+</section>
+<section>
+    <div class="container mt-5 mb-5">
+        <div class="card">
+            <div class="card-header">
+                <h5>Catálogo de libros</h5>
+            </div>
+            <div class="card-body">
+                <p>Gestión de libros</p>
+                <a href="#" class="btn btn-primary btn-sm">Agregar Película</a><br>
+            </div>
+            <table class="table table-hover">
+                <thead>
+                    <th>Portada</th>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Año</th>
+                    <th>ISBN</th>
+                    <th>Acciones</th>
+                </thead>
+                    <tr>
+                        <td>img.jpg</td>
+                        <td>Nuestra parte de noche</td>
+                        <td>Mariana Enriquez</td>
+                        <td>2019</td>
+                        <td>123456</td>
+                        <td>
+                            <a href="" title="Editar" class="btn btn-warning btn-sm"><i class="fas fa-pencil"></i></a>
+                            <a href="" title="Eliminar" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                        </td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+</section>
 {% endblock %}
