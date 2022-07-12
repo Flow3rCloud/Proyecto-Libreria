@@ -19,7 +19,7 @@
             </div>
             <div class="card-body">
                 <p>Gestión de libros</p>
-                <a href="#" class="btn btn-primary btn-sm">Agregar Película</a><br>
+                <a href="{% url 'crear_libro' %}" class="btn btn-primary btn-sm">Agregar Película</a><br>
             </div>
             <table class="table table-hover">
                 <thead>
@@ -37,8 +37,8 @@
                         <td>2019</td>
                         <td>123456</td>
                         <td>
-                            <a href="" title="Editar" class="btn btn-warning btn-sm"><i class="fas fa-pencil"></i></a>
-                            <a href="" title="Eliminar" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                            <a href="{% url 'editar_libro' %}" title="Editar" class="btn btn-warning btn-sm"><i class="fas fa-pencil"></i></a>
+                            <a href="{% url 'eliminar_libro' %}" title="Eliminar" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
                         </td>
                     </tr>
             </table>
