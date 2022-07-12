@@ -34,6 +34,7 @@ header {
     -webkit-animation: efecto_aparecer 1.5s;
     animation-fill-mode: forwards;
 }
+
 #logo-text{
     width: 97px;
     display: flex;
@@ -46,7 +47,7 @@ header {
     animation-fill-mode: forwards;
 }
 
-#img-logo-na{
+/* #img-logo-na{
     height: 75px;
 }
 
@@ -56,7 +57,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-}
+} */
 
 #h3-logo{
     margin:0;
@@ -143,7 +144,9 @@ header {
 
 .card{
     border: 0 !important;
-    box-shadow: 0px 4px 6px -1px rgba(0,0,0,0.2), 0px 1px 3px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.14);
+    box-shadow: 0px 4px 6px -1px rgba(0,0,0,0.2),
+                0px 1px 3px 0px rgba(0,0,0,0.12),
+                0px 2px 2px 0px rgba(0,0,0,0.14);
 }
 
 .card-img{
@@ -232,6 +235,21 @@ footer{
     color: #3e7496;
 }
 
+th:first-child{
+    text-align: center;
+    max-width: 150px; 
+}
+
+td:first-child{
+    text-align: center;
+    max-width: 150px; 
+}
+
+.libro-img{
+    width: 30%;
+}
+
+
 @keyframes efecto_aparecer {
     from { opacity: 0; }
     to { opacity: 1;}
@@ -247,6 +265,15 @@ footer{
 /*Contenido para Dispositivos Móviles*/
 
 @media all and (max-width:767px) and (min-width:420px) {
+
+    #logo{
+        height: 65px !important;
+    }
+
+    #img-logo{
+        height: 65px !important;
+        width: 68px !important;
+    }
 
     #navbarNav {
         margin-right: 0 !important;
@@ -267,15 +294,17 @@ footer{
     #navbarNav ul li a:active {
         transform: none;
     }
-}
 
-.portada{
-    color: white;
-    background-color: lightslategray;
-    height: 280px;
-    background-image: url(../img/portada_md.jpg);
-    background-size: cover;
-    background-position: bottom;
+    #portada{
+        height: 350px;
+    }
+
+    .portada-interno{
+        margin:0;
+        margin-bottom: 2.5rem;
+        padding: 0;
+    }
+
 }
 
 
@@ -285,13 +314,14 @@ footer{
 
 @media all and (max-width:419px) {
 
-    #logo {
-        width: 176px;
-        height: 67px;
-        background-image: url(../img/logo_sm.jpg);
-        background-size: cover;
-        background-position: center;
+    #logo{
+        height: 65px !important;
+        width: 170px;
     }
+    #img-logo{
+        height: 65px !important;
+    }
+    
 
     #navbarNav {
         margin-right: 0 !important;
@@ -310,13 +340,14 @@ footer{
         transform: none;
     }
 
-    .portada{
-        color: white;
-        background-color: lightslategray;
-        height: 150px;
-        background-image: url(../img/portada_md.jpg);
-        background-size: cover;
-        background-position: bottom;
+    #portada{
+        height: 250px;
+    }
+
+    .portada-interno{
+        margin:0;
+        margin-top: 1.3rem;
+        padding: 0;
     }
 }
 
