@@ -11,3 +11,12 @@ def donde_estamos(request):
 
 def catalogo(request):
     return render(request, 'books/catalogo.html', {'titulo': 'Bookflix-Catálogo'})
+
+def crear(request):
+    return render(request, 'books/crear.html', {'titulo': 'Bookflix-Cargar Libro'})
+
+def editar(request):
+    return render(request, 'books/editar.html', {'titulo': 'Bookflix-Editar Libro'})
+
+def eliminar(request):
+    pass
