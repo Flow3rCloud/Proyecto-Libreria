@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %}{{titulo}}{% endblock titulo %}
+
+{% block contenido %}
+
+<section>
+    <div class="container mt-5 mb-5">
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1 justify-content-center">
+            <div class="col mt-3 mb-5">
+                <div class="card">
+                    <div class="card-img" title="hombre leyendo un libro frente a una biblioteca"
+                        style="background-image: url({% static './books/img/card1.jpg' %});">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Tenemos el libro que estás buscando</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk of the
+                            card's content.</p>
+                        <a href="catalogo.html" class="btn btn-success">Catálogo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col mt-3 mb-5">
+                <div class="card">
+                    <div class="card-img" title="mujer leyendo libro en una biblioteca"
+                        style="background-image: url({% static './books/img/card2.jpg' %});">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Recibimos nuevos títulos cada semana</h5>
+                        <p class="card-text">Some quick example text.</p>
+                        <a href="#" class="btn btn-success">Novedades</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col mt-3 mb-5">
+                <div class="card">
+                    <div class="card-img" title="mujer buscando libro en una biblioteca"
+                        style="background-image: url({% static './books/img/card3.jpg' %});">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Solicitá asesoramiento online</h5>
+                        <p class="card-text">Some quick example text to build on the card.</p>
+                        <a href="#" class="btn btn-success">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container mt-3 mb-5">
+        <div class="row row-col-2 align-items-center justify-content-center">
+            <div class="col-5">
+                <img src="{% static './books/img/mujer_leyendo.svg' %}" alt="mujer leyendo" width="100%"/>
+            </div>
+            <div class="col-5" >
+                    <form action="">
+                    <label for="email">Ingresá tu email para recibir novedades:</label>
+                        <input type="email" id="email" class="form-control"/>
+                        <div class="bt text-end">
+                        <button class="btn btn-success" type="submit">Enviar</button>
+                        </div>
+                    </form>    
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container mt-5 mb-5">
+        <h3>Recomendaciones</h3>
+        <p>Enterate que opinan nuestros clientes:</p>
+        <div class="row justify-content-center">
+            <div class="col col-md-4 col-sm-10 col-8 mt-3">
+                <div class="card p4 text-center">
+                    <div class="avatar rounded-circle inline-block" style="background-image:url({% static './books/img/guillermo.jpg' %});">
+                    </div>
+                    <h4 class="user-name">Guillermo</h4>
+                    <p class="user-rev">Todo de 10.<br>Excelente servicio.<br>⭐⭐⭐⭐⭐</p>
+                </div>
+            </div> 
+            <div class="col col-md-4 col-sm-10 col-8 mt-3">
+                <div class="card p4 text-center">
+                    <div class="avatar rounded-circle inline-block" style="background-image:url({% static './books/img/silvina.jpg' %});">
+                    </div>
+                    <h4 class="user-name">Silvina</h4>
+                    <p class="user-rev">La librería es fantástica! Tienen libros alucinantes.<br>⭐⭐⭐⭐⭐</p>
+                </div>
+            </div>
+            <div class="col col-md-4 col-sm-10 col-8 mt-3">
+                <div class="card p4 text-center">
+                    <div class="avatar rounded-circle inline-block" style="background-image:url({% static './books/img/jorge.jpg' %});">
+                    </div>
+                    <h4 class="user-name">Jorge</h4>
+                    <p class="user-rev">Cuentan con un catálogo casi infinito.<br>⭐⭐⭐⭐⭐</p>
+                </div>
+            </div> 
+        </div>
+    </div>
+</section>
+
+
+{% endblock contenido %}

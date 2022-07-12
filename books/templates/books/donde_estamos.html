@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Bookflix-Dónde Estamos{% endblock titulo %}
+    
+{% block contenido %}
+<section>
+    <div class="container mt-5 mb-5">
+        <h3>Vení a conocer tu nuevo lugar preferido:</h3>
+        <p>Agüero 2502, C1425 CABA</p>
+        <div class="responsive-iframe">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.779567942786!2d-58.400217785036055!3d-34.58444376398507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7cc6d5125f3e2685!2sBiblioteca%20Nacional%20Mariano%20Moreno!5e0!3m2!1ses!2sar!4v1657489384549!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container mt-5 mb-5 text-center" id="quienes-somos">
+        <h3>Quiénes Somos:</h3>
+        <div class="row align-items-center mt-5 mb-5">
+            <div class="col-lg-6 col-sm-12 text-center">
+                <img src="./img/quienes_somos.jpg" alt="mujer buscando libro" width="60%">
+            </div>
+            <div class="col-lg-6 col-sm-12 mt-5 mb-5">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi aspernatur quae harum voluptas voluptatem, eaque facilis, quidem, iure nulla distinctio consectetur exercitationem</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi aspernatur quae harum voluptas voluptatem, eaque facilis.</p>
+            </div>
+        </div>
+</section>
+
+{% endblock %}
