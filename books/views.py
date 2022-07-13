@@ -27,8 +27,13 @@ def crear(request):
         return redirect('gestion_catalogo')
     return render(request, 'books/crear.html', {'titulo': 'Bookflix-Cargar Libro', 'formulario': formulario})
 
-def editar(request):
-    return render(request, 'books/editar.html', {'titulo': 'Bookflix-Editar Libro'})
+def editar(request, id_libro):
+    libro = Libro.objects.get(id=id_libro)
+    formulario = LibroForms(request.POST or None, request.FILES or None, instance=libro)
+    if formulario.is_valid():
+        formulario.save()
+        return redirect('gestion_catalogo')
+    return render(request, 'books/editar.html', {'titulo': 'Bookflix-Editar Libro', 'formulario': formulario})
 
 def eliminar(request, id_libro):
     libro = Libro.objects.get(id=id_libro)
