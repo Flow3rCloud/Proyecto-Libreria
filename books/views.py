@@ -28,7 +28,11 @@ def crear(request):
     return render(request, 'books/crear.html', {'titulo': 'Bookflix-Cargar Libro', 'formulario': formulario})
 
 def editar(request, id_libro):
-    libro = Libro.objects.get(id=id_libro)
+    try:
+        libro = Libro.objects.get(id=id_libro)
+    except Libro.DoesNotExist:
+        return render(request, 'books/error_404.html')
+    
     formulario = LibroForms(request.POST or None, request.FILES or None, instance=libro)
     if formulario.is_valid():
         formulario.save()

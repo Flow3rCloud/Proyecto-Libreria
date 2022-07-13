@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %}{{titulo}}{% endblock titulo %}
+
+{% block contenido %}
+
+<section>
+    <div class="container-error" style='margin-top:80px'>
+        <div class="container text-center mt-5 mb-5">
+            <div>
+                <img src="{% static './books/img/404.png' %}" alt="Mujer buscando documentos" style="max-width:40%">
+                <h5>Error 404</h5>
+            </div>
+            <div class="p mb-5">
+                <p>El libro no fue encontrado en la base de datos</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
