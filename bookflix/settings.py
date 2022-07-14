@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'bookflix.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sql10506182',
-        'USER': 'sql10506182',
-        'PASSWORD': 'AetQtyD8n1',
-        'HOST': 'sql10.freemysqlhosting.net',
+        'NAME': 'bookflix',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }

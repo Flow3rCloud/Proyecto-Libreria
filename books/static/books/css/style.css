@@ -16,7 +16,6 @@ header {
 
 
 #logo {
-    width: 250px;
     height: 75px;
     display: flex;
     flex-direction: row;
@@ -105,6 +104,7 @@ header {
 
 #portada{
     color: white;
+    width: 100vw;
     height: 450px;
     background-image: url(../img/portada_md.jpg);
     background-size: cover;
@@ -114,9 +114,13 @@ header {
 }
 
 .portada-interno{
-    margin:0;
-    padding: 0;
-    padding-bottom: 5rem;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 10rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
 }
 
 #portada-sm{
@@ -325,9 +329,7 @@ td:first-child{
     }
 
     .portada-interno{
-        margin:0;
-        margin-bottom: 2.5rem;
-        padding: 0;
+        padding-top: 8rem;
     }
 
     #reviews{
@@ -360,7 +362,7 @@ td:first-child{
 
     #logo{
         height: 65px !important;
-        width: 170px;
+        
     }
     #img-logo{
         height: 65px !important;
@@ -389,9 +391,7 @@ td:first-child{
     }
 
     .portada-interno{
-        margin:0;
-        margin-top: 1.3rem;
-        padding: 0;
+        padding-top: 5rem;
     }
 
     #reviews{

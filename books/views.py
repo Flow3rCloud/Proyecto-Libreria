@@ -1,5 +1,6 @@
+from urllib import response
 from django.shortcuts import redirect, render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from books.models import Libro
 
 from books.forms import LibroForms
@@ -43,3 +44,12 @@ def eliminar(request, id_libro):
     libro = Libro.objects.get(id=id_libro)
     libro.delete()
     return redirect('gestion_catalogo')
+
+def test(request):
+    return render(request, 'books/test.html')
+
+def catalogo_json(request):
+    libros = Libro.objects.all().values()
+    libros_lista= list(libros)
+    response = {'status': 'ok', 'code':200, 'message':'Catálogo de Libros', 'libros': libros_lista}
+    return JsonResponse(response, safe=False)
