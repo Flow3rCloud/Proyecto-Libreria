@@ -10,3 +10,10 @@ venv.bak/
 #django
 __pycache__/
 
+#media
+media/
+imagen/
+
+#db
+sqlite3.db
+
