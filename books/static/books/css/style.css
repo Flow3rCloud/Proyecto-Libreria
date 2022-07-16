@@ -350,6 +350,10 @@ td:first-child{
         max-width: 85%;
     }
 
+    .m-hidden{
+        display:none;
+    }
+
 }
 
 
@@ -390,7 +394,7 @@ td:first-child{
     }
 
     .portada-interno{
-        padding-top: 5rem;
+        padding-top: 6rem;
     }
 
     #reviews{
@@ -411,6 +415,12 @@ td:first-child{
         max-width: 100%;
     }
 
+    .md-hidden{
+        display:none;
+    }
 
+    .xs-hidden{
+        display:none;
+    }
 }
 

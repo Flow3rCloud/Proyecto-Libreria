@@ -25,24 +25,24 @@
             
             <table class="table table-hover">
                 <thead>
-                    <th>Portada</th>
+                    <th class="xs-hidden">Portada</th>
                     <th>Título</th>
                     <th>Autor</th>
                     <th>Año</th>
-                    <th>ISBN</th>
-                    <th>Acciones</th>
+                    <th class="md-hidden">ISBN</th>
+                    <th style="text-align:center;">Acciones</th>
                 </thead>
                 <tbody>
                     {% for libro in libros %}
                         <tr>
-                            <td style="max-width: 150px; text-align:center;">
+                            <td class="xs-hidden">
                                 <img src="{{libro.imagen.url}}" alt="{{libro.titulo}}" class="libro-img">
                             </td>
                             <td>{{libro.titulo}}</td>
                             <td>{{libro.autor}}</td>
                             <td>{{libro.anio}}</td>
-                            <td>{{libro.isbn}}</td>
-                            <td>
+                            <td class="md-hidden">{{libro.isbn}}</td>
+                            <td style="text-align:center;">
                                 <a href="{% url 'editar_libro' libro.id %}" title="Editar" class="btn btn-warning btn-sm"><i class="fas fa-pencil"></i></a>
                                 <a href="{% url 'eliminar_libro' libro.id %}" title="Eliminar" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
                             </td>
